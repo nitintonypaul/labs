@@ -101,7 +101,7 @@ void display() {
     printf("\n");
 }
 
-int main() {
+void main() {
     int choice, value;
 
     while (1) {
@@ -113,6 +113,8 @@ int main() {
         scanf("%d", &choice);
 
         switch (choice) {
+
+            // Input restricted DQ
             case 1:
             	
             	int irchoice;
@@ -140,6 +142,8 @@ int main() {
                 		exit(0);
                 }	
                 break;
+            
+            // Output restricted DQ
             case 2:
             	int orchoice;
             	
@@ -152,31 +156,32 @@ int main() {
                 		printf("Enter value to enqueue: ");
                 		scanf("%d", &value);
                 		enqueueFront(value);
-                	
+                        break;
+
                 	case 2:
                 		printf("Enter value to enqueue: ");
                 		scanf("%d", &value);
                 		enqueueRear(value);
+                        break;
+
                 	case 3:
                 		dequeueFront();
                 		break;
+                }
+
                 break;
+            
+            // Display
             case 3:
-                dequeueFront();
-                break;
-            case 4:
-                dequeueRear();
-                break;
-            case 5:
                 display();
                 break;
-            case 6:
+            
+            // Exit
+            case 4:
                 exit(0);
+
             default:
                 printf("Invalid choice. Try again.\n");
         }
     }
-
-    return 0;
 }
-
