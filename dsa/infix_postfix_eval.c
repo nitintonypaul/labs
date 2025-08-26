@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
 #define MAX_SIZE 100
 
+// Test (3+5)*(7-2)/(8-3)^(2+1) + (9-4*2) + (6/(2+1)) - (7^(2-1)) + (8*3-(9/3)) + (5+(6*2-4)) - (9-(8/(4-2))) + (7*(3+2)) - (6-5+4-3+2-1)
 
 char charStack[MAX_SIZE];
 int charTop = -1;
